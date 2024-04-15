@@ -1,0 +1,13 @@
+.header {
+    background-color: #b200ff;
+    width: 100%;
+    margin: 0;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+}
