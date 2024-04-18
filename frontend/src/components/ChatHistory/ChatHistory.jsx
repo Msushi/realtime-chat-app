@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "./ChatHistory.css";
 
-class ChatHistory extends Component {
-  render() {
-    const messages = this.props.chatHistory.map((msg, index) => (
-      <p key={index}>{msg.data}</p>
-    ));
+import Message from "../Message/Message.jsx"
+
+const ChatHistory = ({ chatHistory }) => {
+
+  const messages = chatHistory.map(msg => <Message message={msg.data} />);
 
     return (
       <div className="ChatHistory">
@@ -13,7 +13,6 @@ class ChatHistory extends Component {
         {messages}
       </div>
     );
-  }
 }
 
 export default ChatHistory;

@@ -1,7 +1,11 @@
-var socket = new WebSocket("ws://localhost:8000/ws");
+var socket;
 
-let connect = (cb) => {
+let connect = (username, cb) => {
   console.log("Attempting Connection...");
+
+  console.log(cb);
+
+  socket = new WebSocket(`ws://localhost:8080/ws?username=${username}`);
 
   socket.onopen = () => {
     console.log("Successfully Connected");
